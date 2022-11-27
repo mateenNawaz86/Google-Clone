@@ -4,6 +4,7 @@ import AppsIcon from "@mui/icons-material/Apps";
 import { IconButton } from "@mui/material";
 import Tooltip from "@mui/material/Tooltip";
 import Button from "@mui/material/Button";
+import Search from "../components/Search";
 
 const Home = () => {
   return (
@@ -47,6 +48,7 @@ const Home = () => {
             alt="logo"
             className="object-contain h-24"
           />
+          <Search  />
         </div>
       </div>
     </>
