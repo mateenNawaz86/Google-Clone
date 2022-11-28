@@ -4,10 +4,13 @@ import SearchIcon from "@mui/icons-material/Search";
 import MicIcon from "@mui/icons-material/Mic";
 import CenterFocusStrongIcon from "@mui/icons-material/CenterFocusStrong";
 import Button from "@mui/material/Button";
+import { search } from "../store/SearchSlice";
+import { useDispatch } from "react-redux";
 
 const Search = ({ hideButtons }) => {
   const [input, setInput] = useState("");
   const navigate = useNavigate();
+  const dispatch = useDispatch();
 
   const inputChangeHandler = (e) => {
     setInput(e.target.value);
@@ -15,6 +18,10 @@ const Search = ({ hideButtons }) => {
 
   const searchHandler = (event) => {
     event.preventDefault();
+
+    // dispatch an action is here
+    dispatch(search(input));
+    console.log(search(input));
 
     // navigate to the search results
     navigate("/search");
