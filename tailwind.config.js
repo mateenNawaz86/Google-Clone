@@ -5,6 +5,13 @@ module.exports = {
     extend: {
       width: {
         min_screen: "75vw",
+        w_un: "unset",
+      },
+      maxWidth: {
+        w_max_un: "unset",
+      },
+      spacing: {
+        mr_un: "unset",
       },
     },
   },
