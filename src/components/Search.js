@@ -30,7 +30,7 @@ const Search = ({ hideButtons }) => {
   return (
     <form>
       <div
-        className="flex items-center border border-gray-300 h-8 px-3 py-5 rounded-full w-min_screen my-0 mx-auto mt-10 max-w-xl"
+        className="flex items-center border border-gray-300 h-8 px-3 py-5 rounded-full w-min_screen my-0 mx-auto  max-w-xl"
         title="Search"
       >
         <SearchIcon className="text-gray-400" />

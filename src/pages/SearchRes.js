@@ -7,6 +7,7 @@ import Search from "../components/Search";
 import SettingsIcon from "@mui/icons-material/Settings";
 import AppsIcon from "@mui/icons-material/Apps";
 import { Button, IconButton, Tooltip } from "@mui/material";
+import SearchOptions from "../components/SearchOptions";
 
 const SearchRes = () => {
   // const { payload } = useSelector((state) => state.search);
@@ -20,24 +21,22 @@ const SearchRes = () => {
 
   return (
     <>
-      <div className="flex justify-between items-center border-b-2 border border-gray-200 bg-white">
-        <div className="flex items-start p-8 sticky top-0 ">
-          <Link to="/">
+      <div className="flex justify-between items-center px-6 mt-8">
+        <div className="flex items-center sticky top-0 ">
+          <Link to="/" title="Go to Goolge Home">
             <img
               src="https://www.google.com/images/branding/googlelogo/1x/googlelogo_color_272x92dp.png"
               alt="searchImg"
-              className="object-contain h-12 mr-12"
+              className="object-contain h-10 mr-12"
             />
           </Link>
-        </div>
-        <div>
           <Search
             hideButtons="false"
             className="w-w_un max-w-w_max_un m-mr_un"
           />
         </div>
 
-        <div className="links">
+        <div>
           <Tooltip title="Settings">
             <IconButton
               size="large"
@@ -65,12 +64,15 @@ const SearchRes = () => {
           <Button
             variant="contained"
             size="medium"
-            sx={{ textTransform: "none" }}
+            sx={{ textTransform: "none", marginLeft: "8px" }}
           >
             Sign in
           </Button>
         </div>
       </div>
+
+      <SearchOptions />
+      <hr />
     </>
   );
 };

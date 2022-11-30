@@ -6,6 +6,7 @@ module.exports = {
       width: {
         min_screen: "75vw",
         w_un: "unset",
+        "9/13": "71%",
       },
       maxWidth: {
         w_max_un: "unset",

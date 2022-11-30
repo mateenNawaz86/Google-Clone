@@ -46,9 +46,9 @@ const Home = () => {
           <img
             src="https://www.google.com/images/branding/googlelogo/1x/googlelogo_color_272x92dp.png"
             alt="logo"
-            className="object-contain h-24"
+            className="object-contain h-24 mb-10"
           />
-          <Search  />
+          <Search />
         </div>
       </div>
     </>
