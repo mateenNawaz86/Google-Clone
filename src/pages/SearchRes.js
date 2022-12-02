@@ -73,6 +73,34 @@ const SearchRes = () => {
 
       <SearchOptions />
       <hr />
+
+      {true && (
+        <div className="max-w-2xl mt-5 ml-52 mb-24">
+          {/* Getting the results count & time */}
+          <p className="text-[#70757a] text-base">
+            About {data?.searchInformation.formattedTotalResults} results(
+            {data?.searchInformation.formattedSearchTime} seconds)
+          </p>
+
+          {/* Search result data */}
+          {data?.items.map((item) => (
+            <div className="my-10 mx-0">
+              <a className="no-underline" href={item.link}>
+                {item.displayLink}
+              </a>
+
+              <a
+                className="text-[#3248C2] text-lg font-semibold hover:underline"
+                href={item.title}
+              >
+                <h2>{item.title}</h2>
+              </a>
+
+              <p className="mt-2">{item.snippet}</p>
+            </div>
+          ))}
+        </div>
+      )}
     </>
   );
 };

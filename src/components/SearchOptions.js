@@ -30,6 +30,14 @@ const SearchOptions = () => {
           <MoreVertIcon />
           <Link to="/more">More</Link>
         </div>
+        <div>
+          <Link
+            className="ml-16 px-3 py-1 hover:bg-[#b9b9b9] hover:text-white hover:rounded-sm"
+            to="/tools"
+          >
+            Tools
+          </Link>
+        </div>
       </div>
     </div>
   );
