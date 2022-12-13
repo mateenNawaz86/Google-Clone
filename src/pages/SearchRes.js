@@ -1,7 +1,7 @@
 import React from "react";
-// import { useSelector } from "react-redux";
-// import useGoogleSearch from "../components/useGoogleSearch";
-import Response from "../components/Response";
+import { useSelector } from "react-redux";
+import useGoogleSearch from "../components/useGoogleSearch";
+// import Response from "../components/Response";
 import { Link } from "react-router-dom";
 import Search from "../components/Search";
 import SettingsIcon from "@mui/icons-material/Settings";
@@ -10,14 +10,14 @@ import { Button, IconButton, Tooltip } from "@mui/material";
 import SearchOptions from "../components/SearchOptions";
 
 const SearchRes = () => {
-  // const { payload } = useSelector((state) => state.search);
+  const { payload } = useSelector((state) => state.search);
 
   // Live API calls
-  // const { data } = useGoogleSearch(payload);
+  const { data } = useGoogleSearch(payload);
 
   // Dummy response
-  const data = Response;
-  console.log(data);
+  // const data = Response;
+  // console.log(data);
 
   return (
     <>
@@ -83,9 +83,19 @@ const SearchRes = () => {
           </p>
 
           {/* Search result data */}
-          {data?.items.map((item) => (
-            <div className="my-10 mx-0">
-              <a className="no-underline" href={item.link}>
+          {data?.items.map((item, index) => (
+            <div className="my-10 mx-0" key={index}>
+              <a className="no-underline flex" href={item.link}>
+                {item.pagemap?.cse_image?.length > 0 &&
+                  item.pagemap?.cse_image[0]?.src && (
+                    <img
+                      src={
+                        item.pagemap?.cse_image?.length > 0 &&
+                        item.pagemap?.cse_image[0].src
+                      }
+                      className="object-contain w-5 h-5 mr-3 rounded"
+                    />
+                  )}
                 {item.displayLink}
               </a>
 

@@ -33,7 +33,7 @@ const Search = ({ hideButtons }) => {
         className="flex items-center border border-gray-300 h-8 px-3 py-5 rounded-full w-min_screen my-0 mx-auto  max-w-xl"
         title="Search"
       >
-        <SearchIcon className="text-gray-400" />
+        <SearchIcon className="text-gray-400 cursor-pointer" />
         <input
           type="text"
           className="flex-1 text-base border-0 px-3 leading-5 focus:outline-none"
@@ -41,8 +41,8 @@ const Search = ({ hideButtons }) => {
           onChange={inputChangeHandler}
         />
         <div className="space-x-2 ">
-          <MicIcon className="text-gray-400" />
-          <CenterFocusStrongIcon className="text-gray-400" />
+          <MicIcon className="text-gray-400 cursor-pointer" />
+          <CenterFocusStrongIcon className="text-gray-400 cursor-pointer" />
         </div>
       </div>
       {!hideButtons ? (
