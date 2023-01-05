@@ -93,6 +93,7 @@ const SearchRes = () => {
                         item.pagemap?.cse_image?.length > 0 &&
                         item.pagemap?.cse_image[0].src
                       }
+                      alt="searchImg"
                       className="object-contain w-5 h-5 mr-3 rounded"
                     />
                   )}
